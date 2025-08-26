@@ -1,0 +1,99 @@
+.users-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* make all cards the same height */
+  font-family: sans-serif;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0 15px;
+}
+
+.users-container .card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px 25px;
+  flex: 1 1 calc(33.333% - 30px); /* 3 columns with gap */
+  max-width: 300px;
+  width: 300px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin: 30px 0;
+  font-size: 2rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.username {
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.info {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  color: #444;
+}
+
+.info span {
+  margin-left: 6px;
+}
+
+.website a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.website a:hover {
+  text-decoration: underline;
+}
+
+.card .skeleton {
+  display: block;
+  background: #e0e0e0;
+  border-radius: 6px;
+  margin: 8px 0;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.card .skeleton.short {
+  width: 60%;
+  height: 22px;
+  margin-bottom: 12px;
+}
+
+.card .skeleton-text {
+  width: 90%;
+  height: 16px;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
